@@ -33,7 +33,7 @@ public class BaseTest {
         options.setApp("C:\\Users\\user\\Downloads\\app-release (7).apk");  // مسار ملف Apk
         options.setAppWaitDuration(Duration.ofSeconds(60));  // المدة التي ينتظرها Appium بعد تثبيت التطبيق
         options.setCapability("autoGrantPermissions", true);  // تفعيل الصلاحيات تلقائيا
-        URL serverURL = new URL("  https://20fd-82-212-126-176.ngrok-free.app/wd/hub");
+        URL serverURL = new URL("  https://a99c-109-107-229-80.ngrok-free.app /wd/hub");
       //  URL serverUrl = new URL("http://127.0.0.1:4723/wd/hub");  //الاتصال ب Appium Server
         System.out.println(" جاري إنشاء الجلسة...");
         options.setCapability("uiautomator2ServerLaunchTimeout", 60000);  // 60 ثانية انتظار خادم UiAutomator2 يشتغل على الجهاز
