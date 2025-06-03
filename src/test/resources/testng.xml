@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="IndependentArabiaSuite">
-    <test name="AllTests">
-        <packages>
-            <package name="com.independentarabia.tests"/>
-        </packages>
-    </test>
-</suite>

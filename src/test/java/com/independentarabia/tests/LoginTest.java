@@ -2,7 +2,7 @@ package com.independentarabia.tests;
 
 
 
-import com.independentarabia.pages.LoginPage;
+
 import org.openqa.selenium.io.Zip;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
