@@ -33,12 +33,16 @@ public class BaseTest {
         options.setApp("C:\\Users\\user\\Downloads\\app-release (7).apk");  // مسار ملف Apk
         options.setAppWaitDuration(Duration.ofSeconds(60));  // المدة التي ينتظرها Appium بعد تثبيت التطبيق
         options.setCapability("autoGrantPermissions", true);  // تفعيل الصلاحيات تلقائيا
-        URL serverURL = new URL("  https://a99c-109-107-229-80.ngrok-free.app /wd/hub");
-      //  URL serverUrl = new URL("http://127.0.0.1:4723/wd/hub");  //الاتصال ب Appium Server
+        //URL serverURL = new URL("  https://a99c-109-107-229-80.ngrok-free.app /wd/hub");
+        String serverURLString = System.getProperty("serverURL").trim();
+        URL serverURL = new URL(serverURLString);
+        driver = new AndroidDriver(serverURL, options);
+
+        //  URL serverUrl = new URL("http://127.0.0.1:4723/wd/hub");  //الاتصال ب Appium Server
         System.out.println(" جاري إنشاء الجلسة...");
         options.setCapability("uiautomator2ServerLaunchTimeout", 60000);  // 60 ثانية انتظار خادم UiAutomator2 يشتغل على الجهاز
         options.setCapability("adbExecTimeout", 60000); // انتظار تنفيذ أوامر ADB قبل ما تعتبر العملية فشلت
-        driver = new AndroidDriver(serverURL, options); // انشاء driver
+        //driver = new AndroidDriver(serverURL, options); // انشاء driver
         System.out.println(" تم إنشاء الجلسة بنجاح: " + driver.getSessionId());
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
