@@ -61,18 +61,18 @@ try {
         }
     }
 
-    Assert.assertTrue(articleClicked, "❌ لم يتم العثور على مقالة غير بودكاست");
+    Assert.assertTrue(articleClicked, " لم يتم العثور على مقالة غير بودكاست");
 
     // ✅ بعد النقر، ننتظر شوي ونتأكد إن الصفحة تغيّرت
     Thread.sleep(3000);
     String currentPageSource = driver.getPageSource();
-    Assert.assertNotEquals(currentPageSource, homePageSource, "❌ لم يتم الانتقال لصفحة المقالة");
+    Assert.assertNotEquals(currentPageSource, homePageSource, " لم يتم الانتقال لصفحة المقالة");
 
     System.out.println("✅ تم فتح مقالة بنجاح والتأكد من الانتقال");
 
 }catch (Exception e) {
         e.printStackTrace();
-        Assert.fail("❌ فشل تنفيذ سيناريو فتح المقالة: " + e.getMessage());
+        Assert.fail(" فشل تنفيذ سيناريو فتح المقالة: " + e.getMessage());
     }
 
 
